@@ -5,15 +5,11 @@ get '/' do
     'Hello world!'
 end
 
-get '/secret' do
-    'it worked'
+get '/cat-form' do
+    erb(:cat_form)
 end
 
-get '/haha' do
-    'hahahahahahahahhahahahahhahahahahahhahahahahaha'
-end
-
-get '/named-cat' do
+post '/named-cat' do
     p params
     @name = params[:name]
     erb(:index)
